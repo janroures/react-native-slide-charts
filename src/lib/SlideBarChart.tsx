@@ -210,11 +210,12 @@ class SlideBarChart extends Component<SlideBarChartComponentProps, State> {
       const xInput = this.chartWidth / 2
 
       // Set selected bar at 50% of chart width
-      this.selectedBarNumber = Math.floor(xInput / barWidthSize) > 0 ?
-        Math.floor(xInput / barWidthSize) < numberOfBars - 1 ?
-          Math.floor(xInput / barWidthSize) :
-          numberOfBars - 1 :
-        0
+    //   this.selectedBarNumber = Math.floor(xInput / barWidthSize) > 0 ?
+    //     Math.floor(xInput / barWidthSize) < numberOfBars - 1 ?
+    //       Math.floor(xInput / barWidthSize) :
+    //       numberOfBars - 1 :
+    //     0
+      this.selectedBarNumber = this.props.data.length - 1
       this.setState({ selectedBarNumber: alwaysShowIndicator ? this.selectedBarNumber : undefined })
 
       // Get the proper x and percentage of the chart to position the toolTip in its starting position
