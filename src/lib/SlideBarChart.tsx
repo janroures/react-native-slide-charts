@@ -206,8 +206,8 @@ class SlideBarChart extends Component<SlideBarChartComponentProps, State> {
       const barSpacingForToolTip = barWidth ?
         (this.chartWidth - (barWidth * numberOfBars)) / (numberOfBars > 1 ? numberOfBars - 1 : 2) :
         barSpacing
-      const barWidthSize = this.chartWidth / numberOfBars
-      const xInput = this.chartWidth / 2
+    //   const barWidthSize = this.chartWidth / numberOfBars
+    //   const xInput = this.chartWidth / 2
 
       // Set selected bar at 50% of chart width
     //   this.selectedBarNumber = Math.floor(xInput / barWidthSize) > 0 ?

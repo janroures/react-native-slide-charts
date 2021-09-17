@@ -8,7 +8,7 @@
     "url": "https://github.com/connectedcars/react-native-slide-charts"
   },
   "publishConfig": {
-    "access": "public"   
+    "access": "public"
   },
   "main": "src/Charts.ts",
   "types": "src/react-native-slide-charts.d.ts",
