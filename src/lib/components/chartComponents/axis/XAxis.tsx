@@ -47,18 +47,31 @@ class XAxis extends Component<XAxisComponentProps> {
     label,
     alignmentBaseline
   }: XAxisMarkerProps) => (
-      <Text
-        x={x}
-        y={y}
-        fill={fill}
-        alignmentBaseline={alignmentBaseline || 'hanging'}
-        textAnchor={textAnchor}
-        key={key}
-      >
-        <TSpan {...labelStyle} >
-          {label}
-        </TSpan>
-      </Text>
+      <>
+        <Text
+          x={x}
+          y={y}
+          fill={fill}
+          alignmentBaseline={alignmentBaseline || 'hanging'}
+          textAnchor={textAnchor}
+          key={key}>
+          <TSpan {...labelStyle} >
+            {label?.split?.(' ')[0]}
+          </TSpan>
+        </Text>
+        {label?.split?.(' ')[1] !== undefined && 
+        <Text
+          x={x}
+          y={y + 12}
+          fill={fill}
+          alignmentBaseline={alignmentBaseline || 'hanging'}
+          textAnchor={textAnchor}
+          key={key}>
+          <TSpan {...labelStyle} >
+            {label?.split(' ')[1]}
+          </TSpan>
+        </Text>}
+      </>
     )
 
   // For charts that want an x-label, label can be left, right, or center justified
